@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Success</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+	.container span {
+		display: inline-block;
+		width: 200px;
+		text-align: left;
+		padding:5px;
+		font-size:20px;
+	}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark" style=height:45px>
+	  <div class="container-fluid">
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" th:href="@{/}">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" th:href="@{/form-handle}">SignUp</a>
+	      </li>
+	    </ul>
+	      <span class="text-white">
+	        Employee Registration
+	      </span>
+	  </div>
+	</nav>
+<!-- nav end -->
+
+	<div class="container">
+		<div class="text-success text-center my-3">
+			<h2>Registration Successful !!</h2>
+		</div>
+		<h3 class="text-center mb-3">Thank you for registering, your details are saved</h3>
+		<div class="text-center col-md-6 offset-md-3">
+			<span>Name</span> 
+			<span th:text="${user.name}"></span> <br/> 
+			
+			<span>Email</span>
+			<span th:text="${user.email}"></span> <br/>
+			
+			<span>Branch</span> 
+			<span th:text="${user.branch}"></span> <br/> 
+			
+			<span>Gender</span> 
+			<span th:text="${user.gender}"></span> <br/>
+			
+			<span>Birth Date</span> 
+			<span th:text="${user.birthDate}"></span> <br/>
+			
+			<span>Sports</span> 
+			<span th:text="${user.hobbies}"></span><br/>
+
+		</div>
+	</div>
+</body>
+</html>
